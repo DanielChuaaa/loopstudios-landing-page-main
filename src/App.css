@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bodyWrapper {
+  @apply h-screen;
+  background: url("../src/images/mobile/image-hero.jpg") top center no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 640px) {
+  .bodyWrapper {
+    @apply h-screen;
+    background: url("../src/images/desktop/image-hero.jpg") top center no-repeat;
+    background-size: cover;
+  }
+}
+
+.bodyWrapper-active {
+  @apply bg-black z-50;
+}
+
+.containerr {
+  @apply lg:px-36 sm:px-12 px-6;
+}
+
+nav {
+  @apply h-screen;
+}
+
+.navWrapper {
+  @apply flex justify-between items-center pt-12;
+}
+
+.logo {
+  @apply cursor-pointer;
+}
+
+.navLink {
+  @apply relative md:flex hidden items-center gap-8;
+}
+
+.navLink a {
+  @apply hover:border-b-2 font-fs md:font-medium font-light text-white md:text-base 453:text-3xl text-2xl;
+  transition: width 0.3s ease;
+}
+
+.navLink-active {
+  @apply fixed top-0 left-0 flex flex-col justify-center items-start gap-4 uppercase px-6 h-screen w-full bg-black z-40;
+}
+
+.hamburgerButton {
+  @apply md:hidden block z-50;
+}
+
+.offeringParent {
+  @apply flex items-center h-80;
+}
+
+.offering {
+  @apply uppercase font-fs font-light text-white 453:text-5xl 395:text-4.5 text-3xl 395:leading-12 leading-10 sm:max-w-16 max-w-full border border-white sm:p-8 p-6 tracking-widest;
+}
+
+.offering-active {
+  @apply hidden;
+}
+
+.theVr {
+  @apply relative flex 850:flex-row flex-col py-24 850:items-end items-center;
+}
+
+.mainImg {
+  background: url("../src/images/mobile/image-interactive.jpg");
+  background-size: contain;
+}
+
+@media (min-width: 640px) {
+  .mainImg {
+    background: url("../src/images/desktop/image-interactive.jpg") top center no-repeat;
+    background-size: contain;
+  }
+}
+
+.textWrapper {
+  @apply 850:absolute right-0 bg-white md:px-12 px-6 pt-12;
+}
+
+.textWrapper h2 {
+  @apply font-light font-fs text-balance text-4xl 850:text-start text-center uppercase max-w-23;
+}
+
+.textWrapper p {
+  @apply font-fs text-DarkGray 850:text-start text-center pt-8 max-w-49;
+}
+
+.ourCreationWrapper {
+  @apply 1049:block flex flex-col items-center 1049:pb-0 pb-16;
+}
+
+.ourCreationHeader {
+  @apply flex 1049:flex-row flex-col 1049:gap-0 gap-4 justify-between items-center 1049:py-8 pb-12;
+}
+
+.ourCreationHeader h2 {
+  @apply font-light font-fs text-balance text-4xl 850:text-start text-center uppercase;
+}
+
+.ourCreationButtonPC {
+  @apply 1049:block hidden font-fp font-medium uppercase tracking-3 border-2 border-VeryDarkGray px-8 py-2 hover:bg-black hover:text-white transition-all ease-linear delay-75;
+}
+
+.ourCreationButtonMobileParent {
+  @apply lg:pt-28 pt-8;
+}
+
+.ourCreationButtonMobile {
+  @apply lg:hidden block font-fp font-medium uppercase tracking-3 border-2 border-VeryDarkGray px-8 py-2 hover:bg-black hover:text-white transition-all ease-linear delay-75;
+}
+
+.imgWrapper {
+  @apply grid 1150:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-6;
+}
+
+.imageParent {
+  @apply relative;
+}
+
+.imageParent::after {
+  @apply absolute top-0 w-full h-full;
+  content: "";
+  transition: background 0.8s ease;
+}
+
+.imageParent:hover::after {
+  @apply bg-lightGray;
+}
+
+.imageParent h3 {
+  @apply absolute bottom-0 font-light font-fs text-white text-3xl text-balance uppercase px-6 lg:pb-6 pb-1 md:max-w-10 max-w-13 z-10;
+  transition: color 0.5s ease;
+}
+
+.imageParent:hover h3 {
+  @apply text-black;
+}
+
+.footerWrapper {
+  @apply bg-black;
+}
+
+.footerWrapperChild {
+  @apply flex lg:flex-row flex-col justify-between items-center py-10;
+}
+
+.footerLogoLink {
+  @apply flex flex-col gap-6;
+}
+
+.footerNavLink {
+  @apply flex lg:flex-row flex-col items-center lg:gap-8 gap-4;
+}
+
+.footerNavLink a {
+  @apply hover:border-b-2  font-fs font-medium text-white;
+  transition: width 0.3s ease;
+}
+
+.socialLinks {
+  @apply relative flex items-center gap-4 cursor-pointer;
+}
+
+.socialLinksImage {
+  @apply hover:opacity-85;
+  transition: opacity 0.2s ease;
+}
+
+.footerSocialCopyright {
+  @apply flex flex-col lg:items-end items-center gap-4 lg:pt-0 pt-12 lg:pb-0 pb-4;
+}
+
+.copyrightText {
+  @apply font-fp text-DarkGray text-center;
+}
